@@ -77,6 +77,10 @@ Route::get('/buffer/change/{buffer_id}', 'HomeController@bufferChange')->name('b
 Route::resource('subscriptions', 'SubscriptionController');
 Route::get('/settings', 'PagesController@settings')->name('settings');;
 Route::get('/social-accounts', 'PagesController@socialAccounts')->name('social-accounts');
+
+Route::get('/history', 'PagesController@socialAccounts')->name('history');
+
+
 Route::get('/users/confirmation/', 'PagesController@confirmation');
 Route::get('/users/confirmation/{token}', 'PagesController@confirmationToken')->name('confirmation');
 Route::post('/users/confirmation/', 'PagesController@confirmationPost');
