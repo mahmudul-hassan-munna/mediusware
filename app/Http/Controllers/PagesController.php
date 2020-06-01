@@ -155,6 +155,11 @@ class PagesController extends Controller
         return view('pages.social-accounts')->with('profiles', $profiles)->with('user', $user);
     }
 
+    public function historyPage()
+    {
+         return view('pages.historyPage');
+    }
+
     public function analytics()
     {
         $user = User::find(Auth::id());

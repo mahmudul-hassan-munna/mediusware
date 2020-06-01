@@ -1,5 +1,27 @@
 <?php $__env->startSection('content'); ?>
-<div class="container-fluid app-body">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+
+<div id="app">
+	
+	<h1>!{ message }!</h1>
+</div>
+
+<script type="text/javascript">
+	var app = new Vue({
+	  el: '#app',
+	  delimiters: ['!{', '}!'],
+	  data: {
+	    message: 'Hello Vue!'
+	  }
+	})
+</script>
+
+
+<!-- <div class="container-fluid app-body">
 	<h3>Social Accounts 
 
 	<?php if($user->plansubs()): ?>
@@ -126,7 +148,9 @@
 			</table>
 		</div>
 	</div>
-</div>
+</div> -->
 <?php $__env->stopSection(); ?>
+
+
 
 <?php echo $__env->make('layouts.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

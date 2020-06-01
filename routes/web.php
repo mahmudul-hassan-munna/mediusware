@@ -78,7 +78,7 @@ Route::resource('subscriptions', 'SubscriptionController');
 Route::get('/settings', 'PagesController@settings')->name('settings');;
 Route::get('/social-accounts', 'PagesController@socialAccounts')->name('social-accounts');
 
-Route::get('/history', 'PagesController@socialAccounts')->name('history');
+Route::get('/history', 'PagesController@historyPage')->name('history');
 
 
 Route::get('/users/confirmation/', 'PagesController@confirmation');
